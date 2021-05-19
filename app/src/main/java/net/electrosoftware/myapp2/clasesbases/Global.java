@@ -3,7 +3,7 @@ package net.electrosoftware.myapp2.clasesbases;
 import java.util.ArrayList;
 
 public class Global {
-
+ //Clase Global
     static ArrayList<User> listaUsers = new ArrayList<User>();
 
     public static ArrayList<User> getListaUsers() {
