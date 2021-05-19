@@ -1,0 +1,209 @@
+<?xml version="1.0" encoding="utf-8"?>
+<android.support.v4.widget.NestedScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="#ccc"
+    app:layout_behavior="@string/appbar_scrolling_view_behavior"
+    tools:context=".activityes.EventoDetalle"
+    tools:showIn="@layout/scrolling_evento_detalle">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:orientation="vertical">
+
+        <!-- BARRA DE ATAJOS DE BOTONES -->
+        <LinearLayout
+            android:id="@+id/linear_toggles_evento"
+            android:layout_width="match_parent"
+            android:layout_height="60dp"
+            android:layout_marginBottom="5dp"
+            android:padding="0dp">
+
+            <ToggleButton
+                android:id="@+id/btn_evento_favoritos"
+                style="@style/ToggleFavorito" />
+
+            <ToggleButton
+                android:id="@+id/btn_evento_asistencia"
+                style="@style/ToggleAsistencia" />
+
+            <Button
+                android:id="@+id/btn_evento_comentar"
+                style="@style/ToggleComentar" />
+
+            <!--Button
+                android:id="@+id/btn_evento_act"
+                style="@style/ToggleAct" /-->
+
+        </LinearLayout>
+
+        <!-- DETALLE DEL evento -->
+
+        <LinearLayout
+            android:id="@+id/rl_detalle_evento"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:background="@color/cardBackGround"
+            android:orientation="horizontal"
+            android:paddingBottom="2dp"
+            android:paddingLeft="10dp"
+            android:paddingRight="10dp">
+
+            <LinearLayout
+                android:id="@+id/lldata"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:gravity="center_vertical"
+                android:orientation="vertical">
+
+                <TextView
+                    android:id="@+id/txt_evento_nombre"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:text="Maratón fútbol 5"
+                    android:textColor="@color/colorPrimaryDark"
+                    android:textSize="18sp"
+                    android:textStyle="bold" />
+
+                <TextView
+                    android:id="@+id/txt_evento_direccion"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:text="Calle 33 # 34a - 66"
+                    android:textColor="@color/colorPrimaryText"
+                    android:textSize="14sp" />
+
+                <TextView
+                    android:id="@+id/text_evento_horario_ini"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:text="06:00 pm - 02:00 am"
+                    android:textColor="@color/colorPrimaryText"
+                    android:textSize="14sp" />
+
+                <TextView
+                    android:id="@+id/text_evento_horario_fin"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:text="06:00 pm - 02:00 am"
+                    android:textColor="@color/colorPrimaryText"
+                    android:textSize="14sp" />
+
+                <TextView
+                    android:id="@+id/text_evento_asistentes"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:text="Asistentes: 100"
+                    android:textColor="@color/colorPrimaryDark"
+                    android:textSize="14sp"
+                    android:textStyle="bold" />
+
+                <TextView
+                    android:id="@+id/text_evento_categoria"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:text="Aire Libre"
+                    android:textColor="@color/colorPrimaryText"
+                    android:textSize="14sp" />
+
+                <TextView
+                    android:id="@+id/text_evento_telefono"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:text="301 433 2949"
+                    android:textColor="@color/colorPrimaryText"
+                    android:textSize="14sp" />
+
+                <TextView
+                    android:id="@+id/text_evento_quien_organiza"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:text="Franck Ramírez"
+                    android:textColor="@color/colorPrimaryDark"
+                    android:textSize="14sp"
+                    android:textStyle="bold" />
+
+            </LinearLayout>
+
+
+            <LinearLayout
+                android:id="@+id/linear_imagen_mapa"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center_vertical"
+                android:layout_weight="2"
+                android:orientation="vertical">
+
+                <ImageView
+                    android:id="@+id/imv_evento_ruteo"
+                    android:layout_width="100dp"
+                    android:layout_height="100dp"
+                    android:src="@drawable/mapa_preview_diag_small" />
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="center_horizontal"
+                    android:text="¿Cómo Llegar?"
+                    android:textColor="@color/colorPrimaryDark"
+                    android:textSize="12sp"
+                    android:textStyle="bold" />
+
+            </LinearLayout>
+
+        </LinearLayout>
+
+        <TextView
+            android:id="@+id/txt_evento_descripcion"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginBottom="8dp"
+            android:background="@color/cardBackGround"
+            android:paddingBottom="4dp"
+            android:paddingLeft="10dp"
+            android:paddingRight="10dp"
+            android:paddingTop="4dp"
+            android:text="@string/lorem_ipsum"
+            android:textColor="@color/colorPrimaryText" />
+
+        <!-- SECCION DE COMENTARIOS -->
+
+        <TextView
+            android:id="@+id/txt_sec_comentarios"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginBottom="5dp"
+            android:layout_marginTop="2dp"
+            android:background="@color/cardBackGround"
+            android:gravity="center_horizontal"
+            android:padding="8dp"
+            android:text="Comentarios"
+            android:textColor="@color/colorPrimaryDark"
+            android:textSize="18sp"
+            android:textStyle="bold" />
+
+        <android.support.v7.widget.RecyclerView
+            android:id="@+id/rv_evento_comentarios"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent" />
+
+        <!--TextView
+            android:id="@+id/txt_evento_ver_mas_comentarios"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginBottom="5dp"
+            android:layout_marginTop="2dp"
+            android:background="@color/cardBackGround"
+            android:gravity="center_horizontal"
+            android:padding="8dp"
+            android:text="Ver más comentarios..."
+            android:textColor="@color/colorPrimaryDark"
+            android:textSize="18sp"
+            android:textStyle="bold" /-->
+
+    </LinearLayout>
+</android.support.v4.widget.NestedScrollView>

@@ -1,0 +1,189 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/cardBackGround"
+    android:scrollbarAlwaysDrawVerticalTrack="true">
+
+    <include
+        android:id="@+id/toolbarCrearLugar"
+        layout="@layout/toolbar" />
+
+    <ScrollView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_above="@+id/linear_botones_crear_lugar"
+        android:layout_below="@+id/toolbarCrearLugar"
+        android:layout_marginBottom="8dp"
+        android:layout_marginLeft="8dp"
+        android:layout_marginRight="8dp">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical">
+
+            <RelativeLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal">
+
+                <com.alexzh.circleimageview.CircleImageView
+                    android:id="@+id/imv_nuevoLugar_foto"
+                    android:layout_width="100dp"
+                    android:layout_height="100dp"
+                    android:layout_centerHorizontal="true"
+                    android:elevation="4dp"
+                    android:src="@drawable/ic_add_photo"
+                    app:view_backgroundColor="@color/cardBackGround"
+                    app:view_borderColor="@color/colorPrimary"
+                    app:view_borderWidth="2dp"
+                    app:view_shadowDx="2dp"
+                    app:view_shadowDy="0dp"
+                    app:view_shadowRadius="2dp" />
+            </RelativeLayout>
+
+            <RelativeLayout
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:layout_marginBottom="10dp"
+                android:layout_marginLeft="8dp"
+                android:layout_marginRight="8dp"
+                android:elevation="4dp">
+
+                <LinearLayout
+                    android:id="@+id/linear_lugar_content"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="vertical">
+
+                    <android.support.design.widget.TextInputLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_margin="2dp">
+
+                        <EditText
+                            android:id="@+id/et_lugar_nombre"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:hint="Nombre del lugar"
+                            android:paddingLeft="8dp"
+                            android:paddingRight="8dp"
+                            android:singleLine="true"
+                            android:textColor="@color/colorPrimaryText"
+                            android:textColorHint="@color/colorAccent" />
+                    </android.support.design.widget.TextInputLayout>
+
+                    <android.support.design.widget.TextInputLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_margin="2dp">
+
+                        <EditText
+                            android:id="@+id/et_lugar_telefono"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:hint="Teléfono"
+                            android:inputType="number"
+                            android:paddingLeft="8dp"
+                            android:paddingRight="8dp"
+                            android:singleLine="true"
+                            android:textColor="@color/colorPrimaryText"
+                            android:textColorHint="@color/colorAccent" />
+                    </android.support.design.widget.TextInputLayout>
+
+                    <android.support.design.widget.TextInputLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_margin="2dp">
+
+                        <EditText
+                            android:id="@+id/et_lugar_horario"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:hint="Horario"
+                            android:inputType="text"
+                            android:paddingLeft="8dp"
+                            android:paddingRight="8dp"
+                            android:singleLine="true"
+                            android:textColor="@color/colorPrimaryText"
+                            android:textColorHint="@color/colorAccent" />
+                    </android.support.design.widget.TextInputLayout>
+
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:orientation="horizontal">
+
+                        <fr.ganfra.materialspinner.MaterialSpinner
+                            android:id="@+id/spinner_lugar_categoria"
+                            style="@style/spinner_style"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            app:ms_alignLabels="false"
+                            app:ms_arrowColor="#D8D8D8"
+                            app:ms_arrowSize="16dp"
+                            app:ms_floatingLabelColor="@color/colorAccent"
+                            app:ms_floatingLabelText="Categorías: "
+                            app:ms_hint="Categorías: "
+                            app:ms_multiline="false" />
+                    </LinearLayout>
+
+                    <android.support.design.widget.TextInputLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_margin="2dp">
+
+                        <EditText
+                            android:id="@+id/et_lugar_descripcion"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:gravity="top|left"
+                            android:hint="Descripción"
+                            android:paddingLeft="8dp"
+                            android:paddingRight="8dp"
+                            android:textColorHint="@color/colorAccent" />
+                    </android.support.design.widget.TextInputLayout>
+
+
+                </LinearLayout>
+            </RelativeLayout>
+        </LinearLayout>
+    </ScrollView>
+
+    <LinearLayout
+        android:id="@+id/linear_botones_crear_lugar"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_alignParentBottom="true"
+        android:layout_marginBottom="8dp"
+        android:layout_marginLeft="8dp"
+        android:layout_marginRight="8dp"
+        android:orientation="horizontal">
+
+        <Button
+            android:id="@+id/btn_lugar_cancelar"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_margin="3dp"
+            android:layout_weight="1"
+            android:background="@drawable/button_background"
+            android:text="Cancelar"
+            android:textAllCaps="false"
+            android:textColor="@color/colorSecondaryText"
+            android:textSize="18sp" />
+
+        <Button
+            android:id="@+id/btn_lugar_continuar"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_margin="3dp"
+            android:layout_weight="1"
+            android:background="@drawable/button_background"
+            android:text="Continuar"
+            android:textAllCaps="false"
+            android:textColor="@color/colorSecondaryText"
+            android:textSize="18sp" />
+    </LinearLayout>
+</RelativeLayout>

@@ -1,0 +1,62 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="#ccc"
+    android:scrollbarAlwaysDrawVerticalTrack="true">
+
+    <include
+        android:id="@+id/toolbarMisEventos"
+        layout="@layout/toolbar" />
+
+    <!--TextView
+        android:id="@+id/txt_mis_eventos_titulo"
+        android:layout_width="match_parent"
+        android:layout_height="50dp"
+        android:layout_marginBottom="5dp"
+        android:background="@color/cardBackGround"
+        android:gravity="center"
+        android:paddingLeft="20dp"
+        android:paddingRight="20dp"
+        android:text="Mis Eventos"
+        android:textColor="@color/colorPrimaryDark"
+        android:textSize="26sp"
+        android:textStyle="bold" /-->
+
+    <LinearLayout
+        android:id="@+id/linear_crear_evento"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/toolbarMisEventos"
+        android:layout_marginBottom="5dp"
+        android:background="@color/cardBackGround"
+        android:orientation="horizontal">
+
+        <ImageView
+            android:layout_width="match_parent"
+            android:layout_height="50dp"
+            android:layout_marginLeft="15dp"
+            android:layout_weight="5"
+            android:src="@drawable/ic_add" />
+
+        <TextView
+            android:id="@+id/txt_crear_sitio"
+            android:layout_width="match_parent"
+            android:layout_height="50dp"
+            android:layout_marginRight="65dp"
+            android:layout_weight="1"
+            android:gravity="center"
+            android:text="Crear Evento"
+            android:textColor="@color/colorPrimaryDark"
+            android:textSize="22sp"
+            android:textStyle="bold" />
+    </LinearLayout>
+
+    <android.support.v7.widget.RecyclerView
+        android:id="@+id/rv_mis_eventos"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_below="@+id/linear_crear_evento"
+        android:layout_marginBottom="5dp" />
+</RelativeLayout>

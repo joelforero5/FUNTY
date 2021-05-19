@@ -1,0 +1,73 @@
+{
+  "project_info": {
+    "project_number": "943735385712",
+    "firebase_url": "https://proyecto-prueba-2e460.firebaseio.com",
+    "project_id": "proyecto-prueba-2e460",
+    "storage_bucket": "proyecto-prueba-2e460.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:943735385712:android:1a9dfc9c55c0ce8b",
+        "android_client_info": {
+          "package_name": "com.app.myapp"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "943735385712-lrtl7od2p4e9sse26p29i7nkg0gg37sm.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyC6vu--Um-iGwRMXCCMwVh25srt43PhSX8"
+        }
+      ],
+      "services": {
+        "analytics_service": {
+          "status": 1
+        },
+        "appinvite_service": {
+          "status": 1,
+          "other_platform_oauth_client": []
+        },
+        "ads_service": {
+          "status": 2
+        }
+      }
+    },
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:943735385712:android:ea3f98039e911cd1",
+        "android_client_info": {
+          "package_name": "net.electrosoftware.myapp2"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "943735385712-lrtl7od2p4e9sse26p29i7nkg0gg37sm.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyC6vu--Um-iGwRMXCCMwVh25srt43PhSX8"
+        }
+      ],
+      "services": {
+        "analytics_service": {
+          "status": 1
+        },
+        "appinvite_service": {
+          "status": 1,
+          "other_platform_oauth_client": []
+        },
+        "ads_service": {
+          "status": 2
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}

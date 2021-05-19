@@ -1,0 +1,15 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <color name="colorPrimary">#F44336</color>
+    <color name="colorPrimaryDark">#D32F2F</color>
+    <color name="colorPrimaryLight">#FFCDD2</color>
+    <color name="colorAccent">#FFA000</color>
+    <color name="cardBackGround">#FFFAFAFA</color>
+    <color name="colorPrimaryText">#000000</color>
+    <color name="colorSecondaryText">#FFFFFF</color>
+    <color name="icons">#FFFFFF</color>
+    <color name="divider">#BDBDBD</color>
+
+    <color name="negro_semitransparente">#B2000000</color>
+    <color name="white">#fafafa</color>
+</resources>

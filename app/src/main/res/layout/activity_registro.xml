@@ -1,0 +1,181 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/colorPrimaryDark"
+    android:orientation="vertical"
+    android:scrollbarAlwaysDrawVerticalTrack="true">
+
+    <TextView
+        android:id="@+id/txt_registro_app_name"
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginBottom="16dp"
+        android:layout_marginTop="22dp"
+        android:gravity="center_horizontal"
+        android:text="@string/app_name"
+        android:textColor="@color/colorSecondaryText"
+        android:textSize="26sp"
+        android:textStyle="bold" />
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/txt_registro_app_name"
+        android:layout_marginBottom="30dp"
+        android:layout_marginLeft="30dp"
+        android:layout_marginRight="30dp"
+        android:layout_marginTop="50dp"
+        android:background="@color/cardBackGround"
+        android:elevation="4dp"
+        android:orientation="vertical"
+        android:padding="20dp">
+
+        <ScrollView
+            android:id="@+id/sv_vistaRegistro"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_above="@+id/btn_registro_registrarse"
+            >
+
+            <LinearLayout
+                android:id="@+id/linear_registro_content"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="vertical"
+                android:paddingTop="30dp">
+
+                <android.support.design.widget.TextInputLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content">
+
+                    <EditText
+                        android:id="@+id/et_registro_email"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:drawableLeft="@drawable/ic_email"
+                        android:hint="Correo electrónico"
+                        android:inputType="textEmailAddress"
+                        android:singleLine="true" />
+                </android.support.design.widget.TextInputLayout>
+
+
+                <android.support.design.widget.TextInputLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content">
+
+                    <EditText
+                        android:id="@+id/et_registro_usuario"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:drawableLeft="@drawable/ic_usuario"
+                        android:hint="Nombre de Usuario"
+                        android:inputType="textEmailAddress"
+                        android:singleLine="true" />
+                </android.support.design.widget.TextInputLayout>
+
+
+                <fr.ganfra.materialspinner.MaterialSpinner
+                    android:id="@+id/spinner_registro_Perfil"
+                    style="@style/spinner_style"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    app:ms_alignLabels="false"
+                    app:ms_arrowColor="#D8D8D8"
+                    app:ms_arrowSize="16dp"
+                    app:ms_floatingLabelColor="@color/colorAccent"
+                    app:ms_floatingLabelText="Perfil: "
+                    app:ms_hint="Perfil: "
+                    app:ms_multiline="false" />
+
+
+                <android.support.design.widget.TextInputLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content">
+
+                    <EditText
+                        android:id="@+id/et_registro_contrasena"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_marginTop="16dp"
+                        android:drawableLeft="@drawable/ic_password"
+                        android:hint="Contraseña"
+                        android:inputType="textPassword"
+                        android:singleLine="true" />
+                </android.support.design.widget.TextInputLayout>
+
+                <android.support.design.widget.TextInputLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content">
+
+                    <EditText
+                        android:id="@+id/et_registro_contrasena_confir"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_marginTop="16dp"
+                        android:drawableLeft="@drawable/ic_password"
+                        android:hint="Confirmar contraseña"
+                        android:inputType="textPassword"
+                        android:singleLine="true" />
+                </android.support.design.widget.TextInputLayout>
+
+                <!--android.support.design.widget.TextInputLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content">
+
+                    <EditText
+                        android:id="@+id/et_registro_telefono"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_marginTop="16dp"
+                        android:drawableLeft="@drawable/ic_mobile"
+                        android:hint="Número de teléfono"
+                        android:inputType="number"
+                        android:singleLine="true" />
+                </android.support.design.widget.TextInputLayout-->
+            </LinearLayout>
+        </ScrollView>
+
+
+        <Button
+            android:id="@+id/btn_registro_registrarse"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_alignParentBottom="true"
+            android:layout_marginTop="22dp"
+            android:background="@drawable/button_background"
+            android:text="Registrarse"
+            android:textAllCaps="false"
+            android:textColor="@color/colorSecondaryText"
+            android:textSize="18sp" />
+
+    </RelativeLayout>
+
+    <!--ImageView
+        android:id="@+id/imv_registro_foto"
+        android:layout_width="100dp"
+        android:layout_height="100dp"
+        android:layout_below="@+id/txt_registro_app_name"
+        android:layout_centerHorizontal="true"
+        android:background="@drawable/user_profile_image_background"
+        android:elevation="4dp"
+        android:padding="20dp"
+        android:src="@drawable/ic_add_photo" /-->
+
+    <com.alexzh.circleimageview.CircleImageView
+        android:id="@+id/imv_registro_foto"
+        android:layout_width="100dp"
+        android:layout_height="100dp"
+        android:layout_below="@+id/txt_registro_app_name"
+        android:layout_centerHorizontal="true"
+        android:elevation="4dp"
+        android:src="@drawable/ic_add_photo"
+        app:view_backgroundColor="@color/cardBackGround"
+        app:view_borderColor="@color/colorPrimary"
+        app:view_borderWidth="2dp"
+        app:view_shadowDx="2dp"
+        app:view_shadowDy="0dp"
+        app:view_shadowRadius="2dp" />
+
+</RelativeLayout>

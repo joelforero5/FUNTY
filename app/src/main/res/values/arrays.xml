@@ -1,0 +1,39 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <string-array name="Categorias">
+        <item>Restaurante y Gastronomía</item>
+        <item>Rumba, Bares y Discotecas</item>
+        <item>Arte y Cultura</item>
+        <item>Música y Conciertos</item>
+        <item>Deporte y Salud</item>
+        <item>Ropa y Accesorios</item>
+        <item>Religión</item>
+    </string-array>
+
+    <string-array name="Patrocinadores">
+        <item>Licorera Juaco</item>
+        <item>Deportes Milo</item>
+        <item>Carnicería el Filete</item>
+        <item>Restaurante donde la nona</item>
+        <item>Bar parranda</item>
+        <item>Motel el escape</item>
+    </string-array>
+
+    <string-array name="image_ids">
+        <item>@drawable/kamran</item>
+        <item>@drawable/kamran1</item>
+        <item>@drawable/kamran2</item>
+        <item>@drawable/kamran3</item>
+        <item>@drawable/kamran4</item>
+        <item>@drawable/kamran5</item>
+        <item>@drawable/kamran6</item>
+        <item>@drawable/kamran7</item>
+        <item>@drawable/kamran8</item>
+        <item>@drawable/kamran9</item>
+    </string-array>
+
+    <string-array name="Perfiles">
+        <item>Consumidor</item>
+        <item>Empresario</item>
+    </string-array>
+</resources>

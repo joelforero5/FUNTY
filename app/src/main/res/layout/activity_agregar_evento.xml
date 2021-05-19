@@ -1,0 +1,322 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/cardBackGround"
+    android:scrollbarAlwaysDrawVerticalTrack="true">
+
+    <include
+        android:id="@+id/toolbarCrearEvento"
+        layout="@layout/toolbar" />
+
+    <ScrollView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_above="@+id/linear_botones_crearevento"
+        android:layout_below="@+id/toolbarCrearEvento"
+        android:layout_marginBottom="8dp"
+        android:layout_marginLeft="8dp"
+        android:layout_marginRight="8dp">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical">
+
+            <RelativeLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal">
+
+                <com.alexzh.circleimageview.CircleImageView
+                    android:id="@+id/imv_nuevoEvento_foto"
+                    android:layout_width="100dp"
+                    android:layout_height="100dp"
+                    android:layout_centerHorizontal="true"
+                    android:elevation="4dp"
+                    android:src="@drawable/ic_add_photo"
+                    app:view_backgroundColor="@color/cardBackGround"
+                    app:view_borderColor="@color/colorPrimary"
+                    app:view_borderWidth="2dp"
+                    app:view_shadowDx="2dp"
+                    app:view_shadowDy="0dp"
+                    app:view_shadowRadius="2dp" />
+            </RelativeLayout>
+
+            <RelativeLayout
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:layout_marginBottom="10dp"
+                android:layout_marginLeft="8dp"
+                android:layout_marginRight="8dp"
+                android:elevation="4dp">
+
+                <LinearLayout
+                    android:id="@+id/linear_evento_content"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="vertical">
+
+                    <android.support.design.widget.TextInputLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_margin="2dp">
+
+                        <EditText
+                            android:id="@+id/et_evento_nombre"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:hint="Nombre del evento"
+                            android:paddingLeft="8dp"
+                            android:paddingRight="8dp"
+                            android:singleLine="true"
+                            android:textColor="@color/colorPrimaryText"
+                            android:textColorHint="@color/colorAccent" />
+                    </android.support.design.widget.TextInputLayout>
+
+                    <android.support.design.widget.TextInputLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_margin="2dp">
+
+                        <EditText
+                            android:id="@+id/et_evento_telefono"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:hint="Teléfono"
+                            android:inputType="number"
+                            android:paddingLeft="8dp"
+                            android:paddingRight="8dp"
+                            android:singleLine="true"
+                            android:textColor="@color/colorPrimaryText"
+                            android:textColorHint="@color/colorAccent" />
+                    </android.support.design.widget.TextInputLayout>
+
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:orientation="horizontal">
+
+                        <android.support.design.widget.TextInputLayout
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:layout_weight="1">
+
+                            <EditText
+                                android:id="@+id/et_evento_fechainicio"
+                                android:layout_width="match_parent"
+                                android:layout_height="wrap_content"
+                                android:editable="false"
+                                android:hint="Fecha de Inicio"
+                                android:paddingLeft="8dp"
+                                android:paddingRight="8dp"
+                                android:textColor="@color/colorPrimaryText"
+                                android:textColorHint="@color/colorAccent" />
+                        </android.support.design.widget.TextInputLayout>
+
+                        <ImageButton
+                            android:id="@+id/btn_evento_fechainicio"
+                            android:layout_width="50dp"
+                            android:layout_height="50dp"
+                            android:layout_gravity="center_vertical"
+                            android:layout_marginRight="10dp"
+                            android:background="@drawable/button_calendario_filtro"
+                            android:padding="15dp"
+                            android:src="@drawable/ic_eventos" />
+
+                        <android.support.design.widget.TextInputLayout
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:layout_weight="1">
+
+                            <EditText
+                                android:id="@+id/et_evento_fechafin"
+                                android:layout_width="match_parent"
+                                android:layout_height="wrap_content"
+                                android:editable="false"
+                                android:hint="Fecha de Fin"
+                                android:paddingLeft="8dp"
+                                android:paddingRight="8dp"
+                                android:textColor="@color/colorPrimaryText"
+                                android:textColorHint="@color/colorAccent" />
+                        </android.support.design.widget.TextInputLayout>
+
+                        <ImageButton
+                            android:id="@+id/btn_evento_fechafin"
+                            android:layout_width="50dp"
+                            android:layout_height="50dp"
+                            android:layout_gravity="center_vertical"
+                            android:layout_marginRight="10dp"
+                            android:background="@drawable/button_calendario_filtro"
+                            android:padding="15dp"
+                            android:src="@drawable/ic_eventos" />
+                    </LinearLayout>
+
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_margin="2dp"
+                        android:orientation="horizontal">
+
+                    </LinearLayout>
+
+
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_margin="2dp"
+                        android:orientation="horizontal">
+
+                        <android.support.design.widget.TextInputLayout
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:layout_weight="1">
+
+                            <EditText
+                                android:id="@+id/et_evento_horainicio"
+                                android:layout_width="match_parent"
+                                android:layout_height="wrap_content"
+                                android:editable="false"
+                                android:hint="Hora de Inicio"
+                                android:paddingLeft="8dp"
+                                android:paddingRight="8dp"
+                                android:textColor="@color/colorPrimaryText"
+                                android:textColorHint="@color/colorAccent" />
+                        </android.support.design.widget.TextInputLayout>
+
+                        <ImageButton
+                            android:id="@+id/btn_evento_horainicio"
+                            android:layout_width="50dp"
+                            android:layout_height="50dp"
+                            android:layout_gravity="center_vertical"
+                            android:layout_marginRight="10dp"
+                            android:background="@drawable/button_calendario_filtro"
+                            android:padding="15dp"
+                            android:src="@drawable/ic_time" />
+
+                        <android.support.design.widget.TextInputLayout
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:layout_weight="1">
+
+                            <EditText
+                                android:id="@+id/et_evento_horafin"
+                                android:layout_width="match_parent"
+                                android:layout_height="wrap_content"
+                                android:editable="false"
+                                android:hint="Hora de Fin"
+                                android:paddingLeft="8dp"
+                                android:paddingRight="8dp"
+                                android:textColor="@color/colorPrimaryText"
+                                android:textColorHint="@color/colorAccent" />
+                        </android.support.design.widget.TextInputLayout>
+
+                        <ImageButton
+                            android:id="@+id/btn_evento_horafin"
+                            android:layout_width="50dp"
+                            android:layout_height="50dp"
+                            android:layout_gravity="center_vertical"
+                            android:layout_marginRight="10dp"
+                            android:background="@drawable/button_calendario_filtro"
+                            android:padding="15dp"
+                            android:src="@drawable/ic_time" />
+                    </LinearLayout>
+
+                    <LinearLayout
+                        android:id="@+id/linear_evento_patrocinador"
+                        android:visibility="gone"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:orientation="horizontal">
+
+                        <fr.ganfra.materialspinner.MaterialSpinner
+                            android:id="@+id/spinner_evento_patrocinador"
+                            style="@style/spinner_style"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            app:ms_alignLabels="false"
+                            app:ms_arrowColor="#D8D8D8"
+                            app:ms_arrowSize="16dp"
+                            app:ms_floatingLabelColor="@color/colorAccent"
+                            app:ms_floatingLabelText="Patrocinador: "
+                            app:ms_hint="Usuario o lugar que patrocina: "
+                            app:ms_multiline="false" />
+                    </LinearLayout>
+
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:orientation="horizontal">
+
+                        <fr.ganfra.materialspinner.MaterialSpinner
+                            android:id="@+id/spinner_evento_categoria"
+                            style="@style/spinner_style"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            app:ms_alignLabels="false"
+                            app:ms_arrowColor="#D8D8D8"
+                            app:ms_arrowSize="16dp"
+                            app:ms_floatingLabelColor="@color/colorAccent"
+                            app:ms_floatingLabelText="Categorías: "
+                            app:ms_hint="Categorías: "
+                            app:ms_multiline="false" />
+                    </LinearLayout>
+
+                    <android.support.design.widget.TextInputLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_margin="2dp">
+
+                        <EditText
+                            android:id="@+id/et_evento_descripcion"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:gravity="top|left"
+                            android:hint="Descripción"
+                            android:paddingLeft="8dp"
+                            android:paddingRight="8dp"
+                            android:textColorHint="@color/colorAccent" />
+                    </android.support.design.widget.TextInputLayout>
+
+
+                </LinearLayout>
+            </RelativeLayout>
+        </LinearLayout>
+    </ScrollView>
+
+    <LinearLayout
+        android:id="@+id/linear_botones_crearevento"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_alignParentBottom="true"
+        android:layout_marginBottom="8dp"
+        android:layout_marginLeft="8dp"
+        android:layout_marginRight="8dp"
+        android:orientation="horizontal">
+
+        <Button
+            android:id="@+id/btn_evento_cancelar"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_margin="3dp"
+            android:layout_weight="1"
+            android:background="@drawable/button_background"
+            android:text="Cancelar"
+            android:textAllCaps="false"
+            android:textColor="@color/colorSecondaryText"
+            android:textSize="18sp" />
+
+        <Button
+            android:id="@+id/btn_evento_continuar"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_margin="3dp"
+            android:layout_weight="1"
+            android:background="@drawable/button_background"
+            android:text="Continuar"
+            android:textAllCaps="false"
+            android:textColor="@color/colorSecondaryText"
+            android:textSize="18sp" />
+    </LinearLayout>
+</RelativeLayout>

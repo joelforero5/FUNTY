@@ -1,0 +1,25 @@
+<?xml version="1.0" encoding="utf-8"?>
+<menu xmlns:android="http://schemas.android.com/apk/res/android">
+
+    <group android:checkableBehavior="single">
+        <item
+            android:id="@+id/nav_perfil_empresario"
+            android:icon="@drawable/ic_empresario"
+            android:title="Perfil" />
+
+        <item
+            android:id="@+id/nav_lugares_empresario"
+            android:icon="@drawable/ic_lugares_empresario"
+            android:title="Lugares" />
+
+        <item
+            android:id="@+id/nav_promo_empresario"
+            android:icon="@drawable/ic_promociones"
+            android:title="Promociones" />
+
+        <item
+            android:id="@+id/nav_cerrar_empresario"
+            android:icon="@drawable/ic_exit"
+            android:title="Cerrar sesión" />
+    </group>
+</menu>

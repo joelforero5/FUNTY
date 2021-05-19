@@ -1,0 +1,130 @@
+<?xml version="1.0" encoding="utf-8"?>
+<manifest xmlns:android="http://schemas.android.com/apk/res/android"
+    package="net.electrosoftware.myapp2">
+
+    <!--
+         The ACCESS_COARSE/FINE_LOCATION permissions are not required to use
+         Google Maps Android API v2, but you must specify either coarse or fine
+         location permissions for the 'MyLocation' functionality. 
+    -->
+    <permission
+        android:name="com.app.myapp.permission.MAPS_RECEIVE"
+        android:protectionLevel="signature" />
+
+    <uses-permission android:name="com.app.myapp.permission.MAPS_RECEIVE" />
+    <uses-permission android:name="android.permission.INTERNET" />
+    <uses-permission android:name="android.permission.ACCESS_NETWORK_STATE" />
+    <uses-permission android:name="android.permission.WRITE_EXTERNAL_STORAGE" />
+    <uses-permission android:name="android.permission.READ_EXTERNAL_STORAGE" />
+    <uses-permission android:name="com.google.android.providers.gsf.permission.READ_GSERVICES" />
+    <uses-permission android:name="android.permission.ACCESS_COARSE_LOCATION" />
+    <uses-permission android:name="android.permission.ACCESS_FINE_LOCATION" />
+    <uses-permission android:name="android.permission.ACCESS_WIFI_STATE" />
+    <uses-permission android:name="android.permission.CAMERA" />
+    <uses-permission android:name="android.permission.VIBRATE" />
+    <uses-permission android:name="android.permission.READ_PHONE_STATE" />
+
+
+    <!--<service
+        android:name="cnet.electrosoftware.myapp2.FetchAddressIntentService"
+        android:exported="false" />
+    -->
+
+    <application
+        android:name="android.support.multidex.MultiDexApplication"
+        android:allowBackup="true"
+        android:icon="@mipmap/ic_launcher"
+        android:label="@string/app_name"
+        android:supportsRtl="true"
+        android:theme="@style/AppTheme">
+        <uses-library android:name="org.apache.http.legacy" android:required="false"/>
+        <activity
+            android:name=".activityes.MainActivity"
+            android:label="@string/app_name"
+            android:screenOrientation="portrait"
+            android:theme="@style/MyThemeNoTittle"
+            android:windowSoftInputMode="stateHidden">
+            <intent-filter>
+                <action android:name="android.intent.action.MAIN" />
+
+                <category android:name="android.intent.category.DEFAULT" />
+            </intent-filter>
+        </activity>
+
+        <meta-data
+            android:name="com.google.android.geo.API_KEY"
+            android:value="@string/google_maps_key" />
+
+        <activity
+            android:name=".activityes.SplashScreen"
+            android:screenOrientation="portrait"
+            android:theme="@android:style/Theme.Black.NoTitleBar.Fullscreen">
+            <intent-filter>
+                <action android:name="android.intent.action.MAIN" />
+
+                <category android:name="android.intent.category.LAUNCHER" />
+            </intent-filter>
+        </activity>
+        <activity
+            android:name=".activityes.Login"
+            android:screenOrientation="portrait"
+            android:theme="@style/MyThemeNoTittle"
+            android:windowSoftInputMode="stateHidden">
+            <intent-filter>
+                <action android:name="android.intent.action.MAIN" />
+
+                <category android:name="android.intent.category.DEFAULT" />
+            </intent-filter>
+        </activity>
+        <activity
+            android:name=".activityes.Registro"
+            android:screenOrientation="portrait"
+            android:theme="@style/MyThemeNoTittle"
+            android:windowSoftInputMode="stateHidden" />
+        <activity
+            android:name=".activityes.LugarDetalle"
+            android:label="Detalle del sitio"
+            android:theme="@style/AppTheme.NoActionBar"
+            android:windowSoftInputMode="stateHidden" />
+        <activity
+            android:name=".activityes.EventoDetalle"
+            android:theme="@style/AppTheme.NoActionBar" />
+        <activity
+            android:name=".activityes.PromoDetalle"
+            android:theme="@style/AppTheme.NoActionBar" />
+        <activity
+            android:name=".activityes.AgregarSitioMapa"
+            android:label="@string/title_activity_crear_evento_map"
+            android:theme="@style/AppTheme.NoActionBar"
+            android:windowSoftInputMode="stateHidden" />
+        <activity
+            android:name=".activityes.AgregarEvento"
+            android:label="Crear Evento"
+            android:theme="@style/AppTheme.NoActionBar"
+            android:windowSoftInputMode="stateHidden" />
+        <activity
+            android:name=".activityes.AgregarLugar"
+            android:label="Crear Lugar"
+            android:theme="@style/AppTheme.NoActionBar"
+            android:windowSoftInputMode="stateHidden" />
+        <activity
+            android:name=".activityes.Comentarios"
+            android:label="Comentarios"
+            android:theme="@style/AppTheme.NoActionBar" />
+        <activity
+            android:name=".activityes.Empresarios"
+            android:label="@string/title_activity_empresarios"
+            android:theme="@style/AppTheme.NoActionBar" />
+        <activity
+            android:name=".activityes.ListaSitiosEmpresario"
+            android:label="Eventos"
+            android:theme="@style/AppTheme.NoActionBar" />
+        <activity
+            android:name=".activityes.Galeria"
+            android:label="Galería" />
+        <activity
+            android:name=".activityes.GaleriaDetalle"
+            android:label="Galería" />
+    </application>
+
+</manifest>

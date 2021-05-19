@@ -1,0 +1,54 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="#ccc"
+    android:scrollbarAlwaysDrawVerticalTrack="true">
+
+    <include
+        android:id="@+id/toolbarMisfavoritos"
+        layout="@layout/toolbar" />
+
+    <!--TextView
+        android:id="@+id/txt_mis_favoritos_titulo"
+        android:layout_width="match_parent"
+        android:layout_height="50dp"
+        android:layout_marginBottom="5dp"
+        android:background="@color/cardBackGround"
+        android:gravity="center"
+        android:paddingLeft="20dp"
+        android:paddingRight="20dp"
+        android:text="Mis favoritos"
+        android:textColor="@color/colorPrimaryDark"
+        android:textSize="26sp"
+        android:textStyle="bold" /-->
+
+    <LinearLayout
+        android:id="@+id/linear_toggles_favoritos"
+        android:layout_width="match_parent"
+        android:layout_height="60dp"
+        android:layout_below="@+id/toolbarMisfavoritos"
+        android:layout_marginBottom="5dp"
+        android:padding="0dp">
+
+        <Button
+            android:id="@+id/btn_favoritos_lugares"
+            style="@style/ToggleLugares" />
+
+        <Button
+            android:id="@+id/btn_favoritos_eventos"
+            style="@style/ToggleEventos" />
+
+        <Button
+            android:id="@+id/btn_favoritos_promociones"
+            style="@style/TogglePromociones" />
+    </LinearLayout>
+
+    <android.support.v7.widget.RecyclerView
+        android:id="@+id/rv_mis_favoritos"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_below="@+id/linear_toggles_favoritos"
+        android:layout_marginBottom="5dp" />
+</RelativeLayout>
